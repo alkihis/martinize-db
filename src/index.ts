@@ -34,6 +34,7 @@ commander
   .option('-l, --log-level <logLevel>', 'Log level [debug|silly|verbose|info|warn|error]', /^(debug|silly|verbose|info|warn|error)$/, 'info')
   .option('--file-log-level <logLevel>', 'Log level (written to file) [debug|silly|verbose|info|warn|error]', /^(debug|silly|verbose|info|warn|error)$/, 'info')
   .option('--log-file <logFile>', 'File log level')
+  .option('--cli-only', "Only start cli without express server")
 .parse(process.argv);
 
 const app = express();
@@ -262,10 +263,15 @@ async function main() {
     process.exit(2);
   }
 
-  HTTP_SERVER.listen(commander.port, () => {
-    logger.info(`Martini Database Server version ${VERSION} is listening on port ${commander.port}.`);
-    startCli();
-  });
+  if (commander.cliOnly) startCli(); 
+  else {
+    HTTP_SERVER.listen(commander.port, () => {
+      logger.info(`Martini Database Server version ${VERSION} is listening on port ${commander.port}.`);
+      startCli();
+    });
+  }
+
+ 
 }
 
 main();

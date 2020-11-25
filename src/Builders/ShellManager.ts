@@ -64,22 +64,22 @@ export default new class ShellManager {
     'conect': {
       'script' : CONECT_PDB_PATH_JM,
       'modules': ['gromacs'],
-      'jobProfile' : "mad-dev",
-      'sysSettingsKey' : "mad-dev"
+      'jobProfile' : "mad-prod",
+      'sysSettingsKey' : "mad-prod"
     },
     'go_virt': {},
     'ccmap': {},
     'insane': {
       'script' : INSANE_PATH_JM,
       'modules': ['insane'],
-      'jobProfile' : "mad-dev",
-      'sysSettingsKey' : "mad-dev"
+      'jobProfile' : "mad-prod",
+      'sysSettingsKey' : "mad-prod"
     },
     'martinize': {
       'script' : MARTINIZE_PATH_JM,
       'modules': ['martinize2'],
-      'jobProfile' : "mad-dev",
-      'sysSettingsKey' : "mad-dev"
+      'jobProfile' : "mad-prod",
+      'sysSettingsKey' : "mad-prod"
     }
   };
 

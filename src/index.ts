@@ -264,7 +264,7 @@ async function main() {
 
   HTTP_SERVER.listen(commander.port, () => {
     logger.info(`Martini Database Server version ${VERSION} is listening on port ${commander.port}.`);
-    startCli();
+    //startCli();
   });
 }
 

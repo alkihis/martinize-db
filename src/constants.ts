@@ -34,7 +34,7 @@ export const FORCE_FIELD_DIR      = "/data/databases/mobi/force_fields/";
 export const DEFAULT_TMP_BASE_DIR = "/data/prod/mad/tmp/";
 
 /* - Couch database - */
-export const DB_PREFIX = "maddev-"
+export const DB_PREFIX = ""
 
 
 /* - Job manager - */

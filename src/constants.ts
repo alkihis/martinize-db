@@ -37,7 +37,6 @@ export const DEFAULT_TMP_BASE_DIR = "/data/prod/mad/tmp/";
 /* - Couch database - */
 export const DB_PREFIX = ""
 
-
 /* - Job manager - */
 export type JobMethod = 'jm' | 'child';
 export const DEFAULT_JOB_METHOD: JobMethod = 'child';
